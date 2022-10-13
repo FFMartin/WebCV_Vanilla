@@ -44,11 +44,6 @@ body{
     color: var(--color-dark);
 }
 
-/* Debug */
-div{
-
-}
-
 /* Curriculum layout */
 div.row{
     display: flex;
