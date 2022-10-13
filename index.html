@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>CV François-Frédéric Martin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/22c0c025ba.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="page">
+            <div class="row">
+                <!-- Side Column -->
+                <div class="side">
+                    <!-- Identity Block -->
+                    <div class="side-element">
+                        <div class="identity">
+                            <div>
+                                <!-- Picture -->
+                                <div class="identity-picture">
+                                    <img src="media/me.png" alt="Photo de votre futur Data Anlyst" width="175" height="175"/>                                    
+                                </div>
+                                <!-- Name -->
+                                <div class="identity-name">
+                                    <h1>François-Frédéric Martin</h1>
+                                </div>
+                            </div>
+                            <!-- About -->
+                            <div class="identity-about">
+                                <h3><span class="fas fa-question"></span> A propos de...</h3>
+                                <p>
+                                    François-Frédéric est passionné de nouvelles technologies depuis (presque) tout petit. 
+                                    Pendant son temps libre, lorsqu'il ne créé pas des pages web moches, il apprécie passer du temps en famille.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tools Block-->
+                    <div class="side-element">
+                        <div class="tools">
+                            <h3><span class="fas fa-tools"></span> Outils et plateformes</h3>
+                            <ul id="outils"></ul>
+                        </div>
+                    </div>
+                    <!-- Programming Block -->
+                    <div class="side-element">
+                        <div class="programming">
+                            <h3><span class="fas fa-code"></span> Langages informatiques</h3>
+                            <ul>
+                                <li>SQL / T-SQL</li>
+                                <li>VBA</li>
+                                <li>SAS</li>
+                                <li>C#</li>
+                                <li>Html / CSS</li>
+                                <li>DAX / M</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Language Block -->
+                    <div class="side-element">
+                        <div class="languages">
+                            <h3><span class="fas fa-globe"></span> Langues vivantes</h3>
+                            <ul>
+                                <li>Français (langue maternelle)</li>
+                                <li>Anglais (lu, écrit, parlé)</li>
+                                <li>Allemand (parlé)</li>
+                            </ul>                            
+                        </div>
+                    </div>
+                    <!-- Contact Block -->                   
+                    <div class="side-element">
+                        <div class="contact">
+                            <h3><span class="fas fa-address-card"></span> Contact</h3>
+                            <ul>
+                                <li>Téléphone : 06.22.93.72.79</li>
+                                <li>Email : ff.martin@outlook.com</li>
+                                <li>Adresse : 14 Allée de la perle 37400-F Amboise</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main Column -->
+                <div class="main">
+                    <div class="main-element" id="jobs">
+                        <h3>Expérience Professionnelle</h3>
+                        <div class="job">
+                            <div class="job-header">
+                                <div class="job-period">period</div>
+                                <div class="job-company">company</div>
+                                <div class="job-title">title</div>
+                            </div>
+                            <div class="job-body"></div>
+                            <div class="job-tasks">
+                                <div class="job-tasks-header collapsible-trigger"><span class="fa-solid fa-caret-down"></span> Tâches et projets réalisés  <span class="fa-solid fa-caret-down"></span></div>
+                                <div class="collapsible-content">
+                                    <div class="job-tasks-content">
+                                        <ul class="job-tasks-list"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-element" id="curricula">
+                        <div class="curriculum">
+                            <div class="curriculum-header">
+                            </div>
+                        </div>
+                        <h3>Parcours Scolaire</h3>
+                        <ul>
+                            <li>CNAM - Master I : Analyse Financière</li>
+                            <li>Université de Poitiers - License d'Administration Publique</li>
+                            <li>Université de Poitiers - DUT Gestion des Entreprises et Administrations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <div class="footer">
+                Footer
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="closeModal" onclick="closeModal()">&times;</span>
+                <p>Hello Modal !</p>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script src="scripts/tools.js"></script>
+        <script src="scripts/jobs.js"></script>
+        <script src="scripts/modal.js"></script>
+        <script src="scripts/collapsible.js"></script>
+    </body>
+</html>

@@ -1,0 +1,237 @@
+/* Colors and Generics */
+:root{
+    --color-dark: #0B132B; 
+    --color-light: #DCE5FF;
+}
+div.page{
+    background-color: white;
+    max-width: 1500px;
+    margin: auto;
+}
+ul{
+    margin-block-start: 0px;
+    margin-inline-start: 0.5em;
+    margin-inline-end: 0px;
+    margin-block-end: 0px;
+    padding-inline-start: 0.5em;
+}
+h1{
+    font-size:1.5em;
+    margin: 0.1em;
+}
+h2{
+    font-size:1.45em;
+    margin: 0.1em;
+}
+h3{
+    font-size:1.3em;
+    margin: 0.1em;
+}
+p{
+    font-size:1em;
+    margin:0.1em;
+}
+
+/* General page layout */
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #aaaaaa;
+    color: var(--color-dark);
+}
+
+/* Debug */
+div{
+
+}
+
+/* Curriculum layout */
+div.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+div.side{
+    flex: 20%;
+}
+div.main{
+    flex: 80%;
+}
+div.footer{
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+div.main-element{
+    padding:0.2em;
+}
+@media screen and (max-width: 800px){
+    div.row{
+        flex-direction: column;
+    }
+}
+
+/* Identity block */
+div.identity{
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;   
+}
+div.identity div{
+    flex: 100%
+}
+div.identity-picture{
+    text-align: center;
+    background-color: white;
+    padding: 0.1em;
+}
+div.identity-name{
+    text-align: center;
+    color:var(--color-light);
+    font-size: 1.5em;
+    background-color:var(--color-dark);
+    border: 1px solid slategray;
+}
+div.identity-about{
+    background-color: white;
+    padding: 0.5em;
+}
+/*
+@media (min-width: 500px){
+    div.identity{
+        flex-direction: row;
+    }
+    div.identity div{
+        flex: 50%;
+    }
+}
+*/
+
+/* Tools block */
+div.tools{
+    padding: 0.5em;
+}
+
+/* Programming block */
+div.programming{
+    padding: 0.5em;
+}
+
+/* Languages block */
+div.languages{
+    padding: 0.5em;    
+}
+
+/* Contact block */
+div.contact{
+    padding: 0.5em;    
+}
+
+/* Jobs block */
+div.job{
+    background-color: white;
+    margin-bottom: 1em;
+}
+div.job-header{
+    display: flex;
+    flex-direction: row;    
+}
+div.job-period{
+    font-style:italic;
+}
+div.job-company{
+    font-style:italic
+}
+div.job-title{
+    font-weight: bold;
+}
+div.job-body{
+}
+div.job-tasks{
+    margin-top: .5em;
+}
+div.job-tasks-header{
+    font-style: italic;
+    cursor: pointer;
+}
+div.job-tasks-header:hover{
+    background-color: lightgrey;
+    color: black
+}
+div.job-tasks-content{
+    box-shadow: 0 5px 4px -4px rgba(0,0,0,.5) inset;
+    padding-left: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+/* Modal */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(255,255,255,0.15);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+
+}
+.modal-content{
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    color:white;
+    border-radius:8px;
+    border-width:thin;
+    border-style:solid;
+    border-color:#1a1a1a1a;
+    background-color:#181818a8;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    background-image: url('media/noise.png');
+    background-repeat: repeat;
+    box-shadow: 0px 25.6px 57.6px rgb(0 0 0 / 14%), 0px 0px 16.4px rgb(0 0 0 / 12%);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+}
+.closeModal {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.closeModal:hover, .closeModal:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* Collapsible */
+.collapsible-trigger{
+}
+.collapsible-content{
+    max-height:0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
