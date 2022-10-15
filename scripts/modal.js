@@ -1,5 +1,4 @@
 var modal = document.getElementById("modal");
-
 var span = document.getElementsByClassName("closeModal");
 
 function showModal(){

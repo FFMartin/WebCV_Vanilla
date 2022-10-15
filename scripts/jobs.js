@@ -27,6 +27,15 @@ const projects=[
     new Project("02","02","SAGA")
 ]
 
+var element = document.getElementById("jobs");
+var parent = element.querySelector('ul')
+for (let i = 0; i < jobs.length; i++){
+    var newJob = document.createElement('li');
+    var text = document.createTextNode(jobs[i].title);
+    newJob.appendChild(text);
+    parent.appendChild(newJob); 
+}
+/*
 const sourceNode = document.getElementById("jobs").querySelector('.job');
 for (let i = 0; i < jobs.length; i++){
     var clone = sourceNode.cloneNode(true);
@@ -46,3 +55,4 @@ for (let i = 0; i < jobs.length; i++){
     document.getElementById("jobs").appendChild(clone);
 }
 sourceNode.parentNode.removeChild(sourceNode);
+*/

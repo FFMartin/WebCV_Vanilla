@@ -1,21 +1,18 @@
-/* Colors and Generics */
-:root{
-    --color-dark: #0B132B; 
-    --color-light: #DCE5FF;
-}
-div.page{
-    background-color: white;
-    max-width: 1000px;
-    margin: auto;
-}
-/*
+
+/* Brwser behavior annulation */
 ul{
     margin-block-start: 0px;
-    margin-inline-start: 0.5em;
+    margin-inline-start: 0px;
     margin-inline-end: 0px;
     margin-block-end: 0px;
-    padding-inline-start: 0.5em;
+    padding-inline-start: 0px;
+    list-style-type: none;
 }
+a{
+    color: inherit;
+    text-decoration: none;
+}
+/*
 h1{
     font-size:1.5em;
     margin: 0.1em;
@@ -27,18 +24,19 @@ h2{
 p{
     font-size:1em;
     margin:0.1em;
-}
+}*/
 
 /* General page layout */
 * {
     box-sizing: border-box;
 }
+div.page{
+    max-width: 1000px;
+    margin: auto;
+}
 body{
-    font-family: Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    background-color: #aaaaaa;
-    color: var(--color-dark);
 }
 
 div.row{
@@ -51,7 +49,7 @@ div.side{
     flex-direction: column;
 }
 div.main{
-    flex: 70%;
+    flex: 75%;
     display: flex;
     flex-direction: column;
 }
@@ -59,48 +57,33 @@ div.footer{
     background-color: var(--color-dark);
     color: var(--color-light);
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 600px){
     div.row{
         flex-direction: column;
     }
-}
-
-/* Identity block */
-/*
-div.identity{
-    display: flex;
-    flex-direction: column; 
-    flex-wrap: wrap;   
-}
-div.identity div{
-    flex: 100%
-}
-div.identity-picture{
-    text-align: center;
-    background-color: white;
-    padding: 0.1em;
-}
-div.identity-name{
-    text-align: center;
-    color:var(--color-light);
-    font-size: 1.5em;
-    background-color:var(--color-dark);
-    border: 1px solid slategray;
-}
-div.identity-about{
-    background-color: white;
-    padding: 0.5em;
-}
-/*
-@media (min-width: 500px){
-    div.identity{
-        flex-direction: row;
+    div.modal{
+        width: 95%;
     }
-    div.identity div{
+}
+@media screen and (max-width: 800px){
+    div.side{
         flex: 50%;
     }
+    div.main{
+        flex: 50%;
+    }
+    div.modal{
+        width: 90%;
+    }
 }
-*/
+@media screen and (max-width: 1000px){
+    div.side{
+        flex: 33%;
+    }
+    div.main{
+        flex: 66%;
+    }
+}
 
 /* Tools block */
 /*
@@ -167,7 +150,7 @@ div.job-tasks-content{
 }
 
 /* Modal */
-.modal{
+.modal-wrapper{
     display: none;
     position: fixed;
     z-index: 1;
@@ -177,17 +160,14 @@ div.job-tasks-content{
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(255,255,255,0.15);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-
 }
-.modal-content{
+
+.modal{
     position: relative;
     margin: auto;
-    padding: 20px;
     width: 80%;
+    /*
+    padding: 20px;
     color:white;
     border-radius:8px;
     border-width:thin;
@@ -203,8 +183,9 @@ div.job-tasks-content{
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s;
-
+    */
 }
+/*
 .closeModal {
     color: #aaaaaa;
     float: right;
@@ -224,7 +205,7 @@ cursor: pointer;
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
-
+*/
 /* Collapsible */
 /*
 .collapsible-trigger{
