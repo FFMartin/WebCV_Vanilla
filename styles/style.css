@@ -5,9 +5,10 @@
 }
 div.page{
     background-color: white;
-    max-width: 1500px;
+    max-width: 1000px;
     margin: auto;
 }
+/*
 ul{
     margin-block-start: 0px;
     margin-inline-start: 0.5em;
@@ -21,10 +22,6 @@ h1{
 }
 h2{
     font-size:1.45em;
-    margin: 0.1em;
-}
-h3{
-    font-size:1.3em;
     margin: 0.1em;
 }
 p{
@@ -44,23 +41,23 @@ body{
     color: var(--color-dark);
 }
 
-/* Curriculum layout */
 div.row{
     display: flex;
     flex-wrap: wrap;
 }
 div.side{
-    flex: 20%;
+    flex: 25%;
+    display: flex;
+    flex-direction: column;
 }
 div.main{
-    flex: 80%;
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
 }
 div.footer{
     background-color: var(--color-dark);
     color: var(--color-light);
-}
-div.main-element{
-    padding:0.2em;
 }
 @media screen and (max-width: 800px){
     div.row{
@@ -69,6 +66,7 @@ div.main-element{
 }
 
 /* Identity block */
+/*
 div.identity{
     display: flex;
     flex-direction: column; 
@@ -105,26 +103,31 @@ div.identity-about{
 */
 
 /* Tools block */
+/*
 div.tools{
     padding: 0.5em;
 }
 
 /* Programming block */
+/*
 div.programming{
     padding: 0.5em;
 }
 
 /* Languages block */
+/*
 div.languages{
     padding: 0.5em;    
 }
 
 /* Contact block */
+/*
 div.contact{
     padding: 0.5em;    
 }
 
 /* Jobs block */
+/*
 div.job{
     background-color: white;
     margin-bottom: 1em;
@@ -153,7 +156,8 @@ div.job-tasks-header{
 }
 div.job-tasks-header:hover{
     background-color: lightgrey;
-    color: black
+    color: black;
+    border-bottom: 1px solid blue;
 }
 div.job-tasks-content{
     box-shadow: 0 5px 4px -4px rgba(0,0,0,.5) inset;
@@ -222,6 +226,7 @@ cursor: pointer;
 }
 
 /* Collapsible */
+/*
 .collapsible-trigger{
 }
 .collapsible-content{
