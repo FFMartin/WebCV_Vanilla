@@ -166,24 +166,15 @@ div.job-tasks-content{
     position: relative;
     margin: auto;
     width: 80%;
-    /*
-    padding: 20px;
-    color:white;
-    border-radius:8px;
-    border-width:thin;
-    border-style:solid;
-    border-color:#1a1a1a1a;
-    background-color:#181818a8;
-    -webkit-backdrop-filter: blur(40px);
-    backdrop-filter: blur(40px);
-    background-image: url('media/noise.png');
-    background-repeat: repeat;
-    box-shadow: 0px 25.6px 57.6px rgb(0 0 0 / 14%), 0px 0px 16.4px rgb(0 0 0 / 12%);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-    */
+}
+.modal-close{
+    float: right;
+}
+.modal-title{
+    float: left;
+}
+.modal-header{
+    overflow:hidden;
 }
 /*
 .closeModal {

@@ -67,7 +67,7 @@ div.identity-picture img{
     animation-duration: 1s;
 }
 @keyframes rotatepicture {
-    from {transform: rotate(-25deg); margin-left:-200px}
+    from {transform: rotate(-360deg); margin-left:-1000px}
     to {transform: rotate(-2deg); margin-left:0px}
 }
 div.identity-name{
@@ -84,7 +84,7 @@ div.identity-name{
 /* Tools */
 #tools li:hover{
     cursor: pointer;
-    text-shadow: 1px 1px rgb(0 0 0 / 37%);
+    text-decoration: underline;
 }
 
 /* Contact */
@@ -103,7 +103,7 @@ div.modal{
     background-color: var(--color-white);
     color: var(--color-dark);
     box-shadow: 0 6px 10px 0 rgb(0 0 0 / 30%);
-    -webkit-animation-name: animmodalrevealatetop;
+    -webkit-animation-name: modalreveal;
     -webkit-animation-duration: 0.4s;
     animation-name: modalreveal;
     animation-duration: 0.4s;
@@ -116,22 +116,28 @@ div.modal{
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
-div.modal-title{
+div.modal-header{
     background-color: var(--color-dark);
     color: var(--color-white);
     padding-top: .2em;
     padding-bottom: .1em;
     padding-left: .2em;
-    padding-right: .2em;    
+    padding-right: .2em;
 }
-.closeModal {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
+.modal-close {
+    color: var(--color-white);
     font-weight: bold;
+    margin-right: 0.5em;
 }
-.closeModal:hover, .closeModal:focus {
+.modal-close:hover, .modal-close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+div.modal-content{
+    height: max-content;    
+    padding-top: .2em;
+    padding-bottom: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
 }
