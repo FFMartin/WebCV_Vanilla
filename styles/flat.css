@@ -1,20 +1,22 @@
 /* Base */
 :root{
-    --color-dark: #0B132B; 
+    --color-primary: rgb(0,128,128); 
     --color-white: white;
-    --color-background: white;
+    --color-background: #B8C3B5;
+    --color-black: rgb(15,15,15);
+    --color-block: rgb(250,255,255);
 }
 body{
     background-color: var(--color-background);
     font-family: Helvetica, sans-serif;
-    color: var(--color-dark);
+    color: var(--color-black);
 }
 div.page{
-    background-color: var(--color-white);
+    background-color: var(--color-background);
 }
 div.footer{
     margin-top: .5em;
-    background-color: var(--color-dark);
+    background-color: var(--color-primary);
     color: var(--color-white);
 }
 
@@ -22,11 +24,16 @@ li{
     padding-top: .3em;
     padding-bottom: .3em;
 }
+li:hover{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+}
 
 /* Blocks */
 div.block{
     box-shadow: 0 1px 4px 0 rgb(0 0 0 / 37%);
-    background-color: var(--color-white);
+    background-color: var(--color-block);
     margin: .5em;
     cursor:default;
 }
@@ -41,7 +48,7 @@ div.block:hover{
     to {transform: scale(1.02,1.02); box-shadow: 0 6px 10px 0 rgb(0 0 0 / 30%)}
 }
 div.block-title{
-    background-color: var(--color-dark);
+    background-color: var(--color-primary);
     color: var(--color-white);
     font-size: 1.2em;
     padding-top: .2em;
@@ -53,7 +60,7 @@ div.block-title span{
     margin-right: .5em;
 }
 div.block-content{
-    background-color: var(--color-white);
+    background-color: var(--color-block);
     padding-top: .5em;
     padding-bottom: 1em;
     padding-left: .5em;
@@ -78,39 +85,29 @@ div.identity-picture img{
 }
 div.identity-name{
     font-size: 1.5em;
-    background-color: var(--color-dark);
+    background-color: var(--color-primary);
     color: var(--color-white);
-    margin-bottom: -.5em;
-    margin-left: -.5em;
-    margin-right: -.5em;
+    margin-bottom: -.66em;
+    margin-left: -.35em;
+    margin-right: -.35em;
     padding: .2em;
     text-align: center;
 }
 
 /* Tools */
-#tools li:hover{
-    cursor: pointer;
-    text-decoration: underline;
-}
-#tools li{
-    text-decoration:wavy;
-}
 
 /* Contact */
-#contact a:hover{
-    text-decoration: underline;
-}
 
 /* Modal */
 .modal-wrapper{
     background-color: rgb(0,0,0);
-    background-color: rgba(255,255,255,0.35);
+    background-color: rgba(0,0,0,0.50);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
 div.modal{
-    background-color: var(--color-white);
-    color: var(--color-dark);
+    background-color: var(--color-block);
+    color: var(--color-black);
     box-shadow: 0 6px 10px 0 rgb(0 0 0 / 30%);
     -webkit-animation-name: modalreveal;
     -webkit-animation-duration: 0.4s;
@@ -126,12 +123,13 @@ div.modal{
     to {top:0; opacity:1}
 }
 div.modal-header{
-    background-color: var(--color-dark);
+    background-color: var(--color-primary);
     color: var(--color-white);
     padding-top: .2em;
     padding-bottom: .1em;
     padding-left: .2em;
     padding-right: .2em;
+    font-size: 1.2em;
 }
 .modal-close {
     color: var(--color-white);
@@ -149,4 +147,5 @@ div.modal-content{
     padding-bottom: .5em;
     padding-left: .5em;
     padding-right: .5em;
+    background-color: var(--col);
 }
