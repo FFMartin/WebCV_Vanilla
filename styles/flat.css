@@ -18,6 +18,11 @@ div.footer{
     color: var(--color-white);
 }
 
+li{
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
 /* Blocks */
 div.block{
     box-shadow: 0 1px 4px 0 rgb(0 0 0 / 37%);
@@ -38,6 +43,7 @@ div.block:hover{
 div.block-title{
     background-color: var(--color-dark);
     color: var(--color-white);
+    font-size: 1.2em;
     padding-top: .2em;
     padding-bottom: .1em;
     padding-left: .2em;
@@ -49,7 +55,7 @@ div.block-title span{
 div.block-content{
     background-color: var(--color-white);
     padding-top: .5em;
-    padding-bottom: .5em;
+    padding-bottom: 1em;
     padding-left: .5em;
     padding-right: .5em;
 }
@@ -85,6 +91,9 @@ div.identity-name{
 #tools li:hover{
     cursor: pointer;
     text-decoration: underline;
+}
+#tools li{
+    text-decoration:wavy;
 }
 
 /* Contact */

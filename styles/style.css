@@ -12,21 +12,7 @@ a{
     color: inherit;
     text-decoration: none;
 }
-/*
-h1{
-    font-size:1.5em;
-    margin: 0.1em;
-}
-h2{
-    font-size:1.45em;
-    margin: 0.1em;
-}
-p{
-    font-size:1em;
-    margin:0.1em;
-}*/
 
-/* General page layout */
 * {
     box-sizing: border-box;
 }
@@ -85,69 +71,6 @@ div.footer{
     }
 }
 
-/* Tools block */
-/*
-div.tools{
-    padding: 0.5em;
-}
-
-/* Programming block */
-/*
-div.programming{
-    padding: 0.5em;
-}
-
-/* Languages block */
-/*
-div.languages{
-    padding: 0.5em;    
-}
-
-/* Contact block */
-/*
-div.contact{
-    padding: 0.5em;    
-}
-
-/* Jobs block */
-/*
-div.job{
-    background-color: white;
-    margin-bottom: 1em;
-}
-div.job-header{
-    display: flex;
-    flex-direction: row;    
-}
-div.job-period{
-    font-style:italic;
-}
-div.job-company{
-    font-style:italic
-}
-div.job-title{
-    font-weight: bold;
-}
-div.job-body{
-}
-div.job-tasks{
-    margin-top: .5em;
-}
-div.job-tasks-header{
-    font-style: italic;
-    cursor: pointer;
-}
-div.job-tasks-header:hover{
-    background-color: lightgrey;
-    color: black;
-    border-bottom: 1px solid blue;
-}
-div.job-tasks-content{
-    box-shadow: 0 5px 4px -4px rgba(0,0,0,.5) inset;
-    padding-left: .5em;
-    padding-top: .5em;
-    padding-bottom: .5em;
-}
 
 /* Modal */
 .modal-wrapper{
@@ -176,34 +99,3 @@ div.job-tasks-content{
 .modal-header{
     overflow:hidden;
 }
-/*
-.closeModal {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.closeModal:hover, .closeModal:focus {
-color: #000;
-text-decoration: none;
-cursor: pointer;
-}
-@-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-}
-@keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
-*/
-/* Collapsible */
-/*
-.collapsible-trigger{
-}
-.collapsible-content{
-    max-height:0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-
