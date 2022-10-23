@@ -19,7 +19,9 @@ div.footer{
     margin-top: .5em;
     background-color: var(--color-primary);
     color: var(--color-white);
+    padding: .5em;
 }
+
 
 li{
     padding-top: .3em;
