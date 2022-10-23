@@ -71,27 +71,49 @@ div.footer{
     }
 }
 
-/* Jobs */
-div.job-header{
-    display:flex;
-    flex-direction: row;
-}
-div.job-period{
-    display:flex;
-    flex-direction:column;
-}
-div.job-position{
+/* Blocks */
+div.block-content{
     display: flex;
     flex-direction: column;
 }
-div.job-task{
-    display: flex;
-    flex-direction: row;
-}
-div.job-task-label{
+
+/* Jobs */
+div.job{
     display:flex;
-    flex-direction: row;
+    flex-direction:row;
 }
+    div.job-chrono{
+        display: flex;
+        flex-direction: column;
+    }
+    div.job-body{
+        display:flex;
+        flex-direction:column;
+    }
+        div.job-header{
+            display:flex;
+            flex-direction: row;
+        }
+            div.job-period{
+                display:flex;
+                flex-direction:column;
+            }
+            div.job-position{
+                display: flex;
+                flex-direction: column;
+            }
+    div.job-tasks{
+        display:flex;
+        flex-direction:column;
+    }
+        div.job-task{
+            display: flex;
+            flex-direction: row;
+        }
+            div.job-task-label{
+                display:flex;
+                flex-direction: row;
+            }
 
 /* Modal */
 .modal-wrapper{

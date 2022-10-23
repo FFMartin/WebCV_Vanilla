@@ -93,45 +93,54 @@ div.identity-name{
 /* Contact */
 
 /* Jobs */
+div.chrono-circle{
+    width:20px;
+    height:40px;
+}
+div.chrono-line{
+    height:100%;
+    width:11px;
+    border-right: 2px solid var(--color-primary);
+}
 div.job-header{
-    height:52px;
     padding-top:10px;
     padding-bottom:2px;
 }
-div.chrono{
-    margin-top: -10px;
-    margin-bottom: -2px;
-}
-div.job-period{
-    padding-left:.2em;
-    padding-right:.2em;
-    width: 100px;
-}
-div.job-dates{
-    color:var(--color-primary);
-    font-size: 1.15em;
-}
-div.job-duration{
-    color:var(--color-primary);
-    font-size: 0.85em;
-    font-style:italic;
-}
-div.job-title{
-    font-size:1.15em;
-}
-div.job-company{
-    font-size:0.85em;
-    color:rgb(150,150,150);
-    font-style:italic;
-}
+    div.job-period{
+        padding-left:.2em;
+        padding-right:.2em;
+        min-width:100px;
+    }
+        div.job-dates{
+            color:var(--color-primary);
+            font-size: 1.15em;
+        }
+        div.job-duration{
+            color:var(--color-primary);
+            font-size: 0.85em;
+            font-style:italic;
+        }
+    div.job-position{
+    }
+        div.job-title{
+        font-size:1.15em;
+        }
+        div.job-company{
+            font-size:0.85em;
+            color:rgb(150,150,150);
+            font-style:italic;
+        }
 div.job-task{
-    height: 20px
 }
-div.job-task-label{
-    margin-left: 25px;
-    width:100%;
-    font-size:0.88em;
-}
+    div.job-task-label{
+        margin-left: 25px;
+        width:100%;
+        font-size:0.88em;
+    }
+    div.job-task-label-icon{
+        display:flex;
+        align-items: center;
+    }
 div.job-task-label:hover{
     cursor: pointer;
     background-color: var(--color-primary);
