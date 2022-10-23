@@ -82,11 +82,11 @@ div.job{
     display:flex;
     flex-direction:row;
 }
-    div.job-chrono{
+    .job .chrono{
         display: flex;
         flex-direction: column;
     }
-    div.job-body{
+    .job .body{
         display:flex;
         flex-direction:column;
     }
@@ -106,7 +106,7 @@ div.job{
         display:flex;
         flex-direction:column;
     }
-        div.job-task{
+        .job.task{
             display: flex;
             flex-direction: row;
         }

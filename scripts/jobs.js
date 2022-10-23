@@ -66,13 +66,13 @@ for (let i = 0; i < jobs.length; i++){
     clone.querySelector('.job-company').innerHTML = thisJob.company;
     clone.querySelector('.job-title').innerHTML = thisJob.title; 
     document.getElementById("jobs").querySelector('.block-content').appendChild(clone);
-    const sourceRow = clone.querySelector('.job-task');  
-    const parentTable = clone.querySelector(".job-tasks");
+    const sourceRow = clone.querySelector('.task');  
+    const parentTable = clone.querySelector(".job-taskslist");
     let jobTasks = tasks.filter(t => t.jobCode == thisJob.code)
     for (let r = 0; r < jobTasks.length; r++){
         var thisTask = jobTasks[r];
         var newTask = sourceRow.cloneNode(true);
-        newTask.querySelector('.job-task-label-text').innerHTML =  thisTask.label;
+        newTask.querySelector('.job-task-text').innerHTML =  thisTask.label;
         newTask.setAttribute('onClick','showTaskModal("' + thisTask.code + '")');
         parentTable.appendChild(newTask);
     }
