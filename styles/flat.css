@@ -93,19 +93,29 @@ div.block-content{
 
 /* Contact */
 
+/* Chrono elements */
+div.chrono-circle{
+    width:20px;
+    height:40px;
+}
+div.chrono-line{
+    height:100%;
+    width:11px;
+    border-right: 2px solid var(--color-primary);
+}
+circle.chrono, line.chrono{
+    stroke:var(--color-primary);
+    stroke-width: 2;
+    fill:transparent;
+}
+circle.chrono:hover{
+    fill:var(--color-primary);
+}
+
 /* Jobs */
 div.job{
     width:100%;
 }
-    div.chrono-circle{
-        width:20px;
-        height:40px;
-    }
-    div.chrono-line{
-        height:100%;
-        width:11px;
-        border-right: 2px solid var(--color-primary);
-    }
 .job .body{
     width:100%;
 }
@@ -163,6 +173,30 @@ div.job-taskslist{
         color:rgb(200,200,200);
     }
 
+/* Curriculum */
+div.diploma{
+    width: 100%;
+}
+.diploma .dates{
+    color:var(--color-primary);
+    font-size: 1.15em;
+    min-width: 100px;
+    padding-top: 10px;
+    padding-left:.2em;
+    padding-right:.2em;
+}
+.diploma .label{
+    padding-top: 10px;
+}
+.diploma .name{
+    font-size:1.15em;    
+}
+.diploma .school{
+    font-size:0.85em;
+    color:rgb(150,150,150);
+    font-style:italic;    
+}
+
 /* Modal */
 .modal-wrapper{
     background-color: rgba(0, 0, 0, .5);
@@ -219,12 +253,3 @@ div.modal-content{
     background-color: var(--col);
 }
 
-/* Circles and bars svg */
-circle.chrono, line.chrono{
-    stroke:var(--color-primary);
-    stroke-width: 2;
-    fill:transparent;
-}
-circle.chrono:hover{
-    fill:var(--color-primary);
-}

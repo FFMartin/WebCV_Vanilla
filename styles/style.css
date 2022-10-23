@@ -115,6 +115,25 @@ div.job{
                 flex-direction: row;
             }
 
+/* Curriculum */
+div.diploma{
+    display:flex;
+    flex-direction:row;    
+}
+    .diploma .chrono{
+        display: flex;
+        flex-direction: column;
+    }
+    .diploma .body{
+        display:flex;
+        flex-direction:row;
+    }
+    .diploma .label{
+        display: flex;
+        flex-direction: column;
+    }
+
+
 /* Modal */
 .modal-wrapper{
     display: none;

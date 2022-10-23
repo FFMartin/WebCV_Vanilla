@@ -82,6 +82,7 @@
                 </div>
                 <!-- Main Column -->
                 <div class="main">
+                    <!-- Jobs Block -->
                     <div class="block" id="jobs">
                         <div class="block-title"><span class="fa-solid fa-briefcase fa-fw"></span>Expérience Professionnelle</div>
                         <div class="block-content">
@@ -118,14 +119,29 @@
                             </div>
                         </div>
                     </div>
-                    <div class="block" id="curricula">
+                    <!-- Curriculum Block -->
+                    <div class="block" id="curriculum">
                         <div class="block-title"><span class="fa-solid fa-graduation-cap fa-fw"></span>Parcours Scolaire</div>
                         <div class="block-content">
-                            <ul>
-                                <li>CNAM - Master I : Analyse Financière</li>
-                                <li>Université de Poitiers - License d'Administration Publique</li>
-                                <li>Université de Poitiers - DUT Gestion des Entreprises et Administrations</li>
-                            </ul>
+                            <div class="diploma">
+                                <div class="chrono">
+                                    <div class="chrono-circle">
+                                        <svg height="40" width="20">
+                                            <line x1="50%" y1="0" x2="50%" y2="12" class="chrono" />
+                                            <circle cx="50%" cy="20" r="9" class="chrono" />
+                                            <line x1="50%" y1="28" x2="50%" y2="40" class="chrono" />
+                                        </svg>
+                                    </div>
+                                    <div class="chrono-line"></div>                                
+                                </div>
+                                <div class="body">
+                                    <div class="dates">Dates</div>
+                                    <div class="label">
+                                        <div class="name">Diploma</div>
+                                        <div class="school">School</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="block" id="hobbies">
@@ -152,6 +168,7 @@
         </div>
         <script src="scripts/tools.js"></script>
         <script src="scripts/jobs.js"></script>
+        <script src="scripts/curriculum.js"></script>
         <script src="scripts/modal.js"></script>
     </body>
 </html>
