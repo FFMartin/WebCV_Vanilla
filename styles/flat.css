@@ -69,16 +69,16 @@ div.block-content{
 }
 
 /* Identity */
-div.identity-picture{
+#identity .picture{
     text-align: center;
     padding-top: .2em;
     padding-bottom: .3em;
 }
-div.identity-picture img{
+#identity .picture img{
     transform: rotate(-2deg);
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 57%);
 }
-div.identity-name{
+#identity .name{
     font-size: 1.5em;
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -155,8 +155,6 @@ div.job-taskslist{
         display:flex;
         align-items: center;
     }
-    div.job-task-caret{
-    }   
     div.job-task-text{
         margin-left:5px;
     }
