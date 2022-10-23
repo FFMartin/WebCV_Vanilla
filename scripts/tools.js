@@ -24,7 +24,7 @@ const tools =[
         +   "D'après Statista, il s'agit du 3ème SGBD le plus utilisé dans le monde, juste derrière Oracle et MySQL."
         +   "</p>"
     ),
-        new Tool("OFFICE", "MS Office", "fa-brands fa-microsoft",
+    new Tool("OFFICE", "MS Office", "fa-brands fa-microsoft",
         "Blablablablabla"
     ),
     new Tool("SAS", "SAS / WPS", "fa-solid fa-magnifying-glass-chart",
