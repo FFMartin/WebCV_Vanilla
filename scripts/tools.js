@@ -52,24 +52,9 @@ for (let i = 0; i < tools.length; i++){
     newTool.innerHTML = '<span class="' + tools[i].icon + ' fa-fw"></span>  ' + tools[i].name;
     parent.appendChild(newTool); 
 }
-
-var modal = document.getElementById("modal");
-var modalContent = modal.querySelector(".modal-content");
-var modalTitle = modal.querySelector(".modal-title");
-var span = document.getElementsByClassName("modal-close");
 function showToolModal(code){
     modal.style.display="block";
     var thisTool = tools.find(o => o.code == code);
     modalTitle.innerHTML=thisTool.name;
     modalContent.innerHTML=thisTool.description;
-}
-function closeModal(){
-    modal.style.display="none";
-    modalContent.innerHTML='';
-}
-window.onclick = function(event){
-    if (event.target == modal){
-        modal.style.display = "none";
-        modalContent.innerHTML='';
-    }
 }

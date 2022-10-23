@@ -32,45 +32,56 @@ const jobs =[
     )
 ];
 
-class Project {
-    constructor(code, jobCode, label){
+class Task {
+    constructor(code, jobCode, label, description){
         this.code = code;
         this.jobCode = jobCode;
         this.label = label;
+        this.description = description;
     }
 }
 
-const projects=[
-    new Project("01","02","Statistiques de Consommations Médicales"),
-    new Project("02","02","Tableaux de Bord des Services Digitaux"),
-    new Project("03","02","SAGA"),
-    new Project("04","02","Suivi des Services Digitaux"),
-    new Project("05","01","Statistiques de Gestion"),
-    new Project("06","01","Pilotage du Portefeuille"),
-    new Project("07","01","Rationnalisation des Indicateurs"),
-    new Project("08","01","Refonte des Reportings"),
-    new Project("09","01","Synthèses Quotidiennes"),
-    new Project("10","01","Tableaux de Bord de Production")
+const tasks=[
+    new Task("01","02","Statistiques de Consommations Médicales","Blablabla"),
+    new Task("02","02","Tableaux de Bord des Services Digitaux","Blablabla"),
+    new Task("03","02","SAGA","Blablabla"),
+    new Task("04","02","Suivi des Services Digitaux","Blablabla"),
+    new Task("05","01","Statistiques de Gestion","Blablabla"),
+    new Task("06","01","Pilotage du Portefeuille","Blablabla"),
+    new Task("07","01","Rationnalisation des Indicateurs","Blablabla"),
+    new Task("08","01","Refonte des Reportings","Blablabla"),
+    new Task("09","01","Synthèses Quotidiennes","Blablabla"),
+    new Task("10","01","Tableaux de Bord de Production","Blablabla"),
+    new Task("11","03","Automatisation des Reportings et Tableaux de Bord","Blablabla"),
+    new Task("12","03","Rationnalisation de la planification","Blablabla"),
+    new Task("13","04","Gestion des Reportings","Blablabla")
 ]
 
 const sourceNode = document.getElementById("jobs").querySelector('.job');
 for (let i = 0; i < jobs.length; i++){
-    console.log(jobs[i].title);
+    var thisJob = jobs[i];
     var clone = sourceNode.cloneNode(true);
-    clone.querySelector('.job-dates').innerHTML =  jobs[i].dates;
-    clone.querySelector('.job-duration').innerHTML =  jobs[i].duration;
-    clone.querySelector('.job-company').innerHTML = jobs[i].company;
-    clone.querySelector('.job-title').innerHTML =   jobs[i].title; 
+    clone.querySelector('.job-dates').innerHTML = thisJob.dates;
+    clone.querySelector('.job-duration').innerHTML = thisJob.duration;
+    clone.querySelector('.job-company').innerHTML = thisJob.company;
+    clone.querySelector('.job-title').innerHTML = thisJob.title; 
     document.getElementById("jobs").querySelector('.block-content').appendChild(clone);
     const sourceRow = clone.querySelector('.job-task');  
     const parentTable = clone.querySelector(".job-tasks");
-    for (let r = 0; r < projects.length; r++){
-        if(projects[r].jobCode == jobs[i].code){
-        var cloneRow = sourceRow.cloneNode(true);
-         cloneRow.querySelector('.job-task-label-text').innerHTML =  projects[r].label;
-        parentTable.appendChild(cloneRow);
-        }
+    let jobTasks = tasks.filter(t => t.jobCode == thisJob.code)
+    for (let r = 0; r < jobTasks.length; r++){
+        var thisTask = jobTasks[r];
+        var newTask = sourceRow.cloneNode(true);
+        newTask.querySelector('.job-task-label-text').innerHTML =  thisTask.label;
+        newTask.setAttribute('onClick','showTaskModal("' + thisTask.code + '")');
+        parentTable.appendChild(newTask);
     }
     sourceRow.parentNode.removeChild(sourceRow);
 }
 sourceNode.parentNode.removeChild(sourceNode);
+function showTaskModal(code){
+    modal.style.display="block";
+    var thisTask = tasks.find(o => o.code == code);
+    modalTitle.innerHTML=thisTask.label;
+    modalContent.innerHTML=thisTask.description;
+}
