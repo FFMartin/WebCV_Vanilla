@@ -71,6 +71,27 @@ div.footer{
     }
 }
 
+/* Jobs */
+div.job-header{
+    display:flex;
+    flex-direction: row;
+}
+div.job-period{
+    display:flex;
+    flex-direction:column;
+}
+div.job-position{
+    display: flex;
+    flex-direction: column;
+}
+div.job-task{
+    display: flex;
+    flex-direction: row;
+}
+div.job-task-label{
+    display:flex;
+    flex-direction: row;
+}
 
 /* Modal */
 .modal-wrapper{
@@ -99,3 +120,4 @@ div.footer{
 .modal-header{
     overflow:hidden;
 }
+

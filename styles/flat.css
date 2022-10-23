@@ -8,7 +8,7 @@
 }
 body{
     background-color: var(--color-background);
-    font-family: Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--color-black);
 }
 div.page{
@@ -76,12 +76,6 @@ div.identity-picture{
 div.identity-picture img{
     transform: rotate(-2deg);
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 57%);
-    animation-name: rotatepicture;
-    animation-duration: 1s;
-}
-@keyframes rotatepicture {
-    from {transform: rotate(-360deg); margin-left:-1000px}
-    to {transform: rotate(-2deg); margin-left:0px}
 }
 div.identity-name{
     font-size: 1.5em;
@@ -97,6 +91,59 @@ div.identity-name{
 /* Tools */
 
 /* Contact */
+
+/* Jobs */
+div.job-header{
+    height:52px;
+    padding-top:10px;
+    padding-bottom:2px;
+}
+div.chrono{
+    margin-top: -10px;
+    margin-bottom: -2px;
+}
+div.job-period{
+    padding-left:.2em;
+    padding-right:.2em;
+    width: 100px;
+}
+div.job-dates{
+    color:var(--color-primary);
+    font-size: 1.15em;
+}
+div.job-duration{
+    color:var(--color-primary);
+    font-size: 0.85em;
+    font-style:italic;
+}
+div.job-title{
+    font-size:1.15em;
+}
+div.job-company{
+    font-size:0.85em;
+    color:rgb(150,150,150);
+    font-style:italic;
+}
+div.job-task{
+    height: 20px
+}
+div.job-task-label{
+    margin-left: 25px;
+    width:100%;
+    font-size:0.88em;
+}
+div.job-task-label:hover{
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color:var(--color-white);
+}
+div.job-task-label-text{
+    padding-left:5px;
+}
+div.job-task-label-icon{
+    padding-left:10px;
+    color:rgb(200,200,200);
+}
 
 /* Modal */
 .modal-wrapper{
@@ -148,4 +195,14 @@ div.modal-content{
     padding-left: .5em;
     padding-right: .5em;
     background-color: var(--col);
+}
+
+/* Circles and bars svg */
+circle.chrono, line.chrono{
+    stroke:var(--color-primary);
+    stroke-width: 2;
+    fill:transparent;
+}
+circle.chrono:hover{
+    fill:var(--color-primary);
 }
