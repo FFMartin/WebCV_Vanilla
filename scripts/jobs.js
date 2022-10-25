@@ -33,16 +33,25 @@ const jobs =[
 ];
 
 class Task {
-    constructor(code, jobCode, label, description){
+    constructor(code, jobCode, label, description, components){
         this.code = code;
         this.jobCode = jobCode;
         this.label = label;
         this.description = description;
+        this.components = components;
+    }
+}
+class Component {
+    constructor(label, part){
+        this.label = label;
+        this.part = part;
     }
 }
 
 const tasks=[
-    new Task("01","02","Statistiques de Consommations Médicales","Blablabla"),
+    new Task("01","02","Statistiques de Consommations Médicales","Blablabla",
+        [new Component("Data","33"),new Component("Design","25"),new Component("Documentation","42")]
+    ),
     new Task("02","02","Tableaux de Bord des Services Digitaux","Blablabla"),
     new Task("03","02","SAGA","Blablabla"),
     new Task("04","02","Suivi des Services Digitaux","Blablabla"),
@@ -79,6 +88,7 @@ for (let i = 0; i < jobs.length; i++){
     sourceRow.parentNode.removeChild(sourceRow);
 }
 sourceNode.parentNode.removeChild(sourceNode);
+
 function showTaskModal(code){
     modal.style.display="block";
     var thisTask = tasks.find(o => o.code == code);
