@@ -40,6 +40,29 @@ class Task {
         this.description = description;
         this.components = components;
     }
+    
+    get donutStyle() {
+        var maxAngle = 0;
+        for(let i =0; i<this.components.length; i++){
+            maxAngle = maxAngle + this.components[i].part;    
+        }
+        console.log(maxAngle);
+        var startAngle = 0;
+        var endAngle = 0;
+        var style = "background: conic-gradient( ";
+        for(let i =0; i<this.components.length; i++){
+            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            endAngle = startAngle + Math.floor(this.components[i].part * 360 / maxAngle);  
+            console.log(this.components[i].part);
+            console.log(endAngle); 
+            style = style + " " + randomColor + " " + startAngle + "deg " + endAngle + "deg, ";   
+            startAngle = endAngle       
+        } 
+        style = style.substring(0,style.length-2);
+        style = style + " )";
+        return style;  
+    }
+    
 }
 class Component {
     constructor(label, part){
@@ -50,7 +73,7 @@ class Component {
 
 const tasks=[
     new Task("01","02","Statistiques de Consommations Médicales","Blablabla",
-        [new Component("Data","33"),new Component("Design","25"),new Component("Documentation","42")]
+        [new Component("Data",33),new Component("Design",25),new Component("Documentation",42)]
     ),
     new Task("02","02","Tableaux de Bord des Services Digitaux","Blablabla"),
     new Task("03","02","SAGA","Blablabla"),
@@ -93,5 +116,7 @@ function showTaskModal(code){
     modal.style.display="block";
     var thisTask = tasks.find(o => o.code == code);
     modalTitle.innerHTML=thisTask.label;
-    modalContent.innerHTML=thisTask.description;
+    var donut = "<div class=\"donut\" style=\"" + thisTask.donutStyle +"\"><div class=\"donut-hole\"></div>";
+    console.log(donut);
+    modalContent.innerHTML = donut;
 }
