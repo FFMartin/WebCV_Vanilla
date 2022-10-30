@@ -40,7 +40,6 @@ class Task {
         this.description = description;
         this.components = components;
     }
-    
     get donutStyle() {
         var maxAngle = 0;
         for(let i =0; i<this.components.length; i++){
@@ -53,8 +52,6 @@ class Task {
         for(let i =0; i<this.components.length; i++){
             var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
             endAngle = startAngle + Math.floor(this.components[i].part * 360 / maxAngle);  
-            console.log(this.components[i].part);
-            console.log(endAngle); 
             style = style + " " + randomColor + " " + startAngle + "deg " + endAngle + "deg, ";   
             startAngle = endAngle       
         } 
@@ -62,7 +59,7 @@ class Task {
         style = style + " )";
         return style;  
     }
-    
+   
 }
 class Component {
     constructor(label, part){
@@ -116,7 +113,10 @@ function showTaskModal(code){
     modal.style.display="block";
     var thisTask = tasks.find(o => o.code == code);
     modalTitle.innerHTML=thisTask.label;
-    var donut = "<div class=\"donut\" style=\"" + thisTask.donutStyle +"\"><div class=\"donut-hole\"></div>";
-    console.log(donut);
-    modalContent.innerHTML = donut;
+    var donut = "<div class=\"donut\" style=\"" + thisTask.donutStyle +"\"><div class=\"donut-hole\"></div></div>";
+    var legend = "<div>Légende</div>";
+    var chart = "<div class=\"chart\">" + donut + legend + "</div>";
+    var text = "<div>" + thisTask.description + "</div>";
+    var content = "<div>" + chart + text + "</div>";
+    modalContent.innerHTML = content;
 }
